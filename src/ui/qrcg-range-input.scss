@@ -1,0 +1,168 @@
+:host {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-bottom: 0.5rem;
+}
+
+:host(:not([has-label])) .title {
+    display: none;
+}
+
+input {
+    display: block;
+    flex: 1;
+}
+
+.value {
+    display: flex;
+}
+
+.number {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    background-color: var(--gray-0);
+}
+
+/** Compiled CSS from https://codepen.io/davidkpiano/pen/xLKBpM */
+
+[type='range'] {
+    -webkit-appearance: none;
+    margin: 0.75rem 0;
+    width: 100%;
+}
+[type='range']:focus {
+    outline: 0;
+}
+[type='range']:focus::-webkit-slider-runnable-track {
+    background: linear-gradient(
+        to bottom,
+        #dedede,
+        #dedede 49.9%,
+        #d1d1d1 50%,
+        #d1d1d1 100%
+    );
+}
+[type='range']:focus::-ms-fill-lower {
+    background: linear-gradient(
+        to bottom,
+        #dedede,
+        #dedede 49.9%,
+        #d1d1d1 50%,
+        #d1d1d1 100%
+    );
+}
+[type='range']:focus::-ms-fill-upper {
+    background: linear-gradient(
+        to bottom,
+        #dedede,
+        #dedede 49.9%,
+        #d1d1d1 50%,
+        #d1d1d1 100%
+    );
+}
+[type='range']::-webkit-slider-runnable-track {
+    cursor: pointer;
+    height: 0.4rem;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        #dedede,
+        #dedede 49.9%,
+        #d1d1d1 50%,
+        #d1d1d1 100%
+    );
+    border: 0.1rem solid #dedede;
+    border-radius: 25px;
+}
+[type='range']::-webkit-slider-thumb {
+    background: var(--primary-0);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    -webkit-appearance: none;
+    margin-top: -0.65rem;
+}
+[type='range']::-moz-range-track {
+    cursor: pointer;
+    height: 0.4rem;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        #dedede,
+        #dedede 49.9%,
+        #d1d1d1 50%,
+        #d1d1d1 100%
+    );
+    border: 0.1rem solid #dedede;
+    border-radius: 25px;
+}
+[type='range']::-moz-range-thumb {
+    background: var(--primary-0);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+[type='range']::-ms-track {
+    cursor: pointer;
+    height: 0.4rem;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    border-width: 0.75rem 0;
+    color: transparent;
+}
+[type='range']::-ms-fill-lower {
+    background: linear-gradient(
+        to bottom,
+        #dedede,
+        #dedede 49.9%,
+        #d1d1d1 50%,
+        #d1d1d1 100%
+    );
+    border: 0.1rem solid #dedede;
+    border-radius: 50px;
+}
+[type='range']::-ms-fill-upper {
+    background: linear-gradient(
+        to bottom,
+        #dedede,
+        #dedede 49.9%,
+        #d1d1d1 50%,
+        #d1d1d1 100%
+    );
+    border: 0.1rem solid #dedede;
+    border-radius: 50px;
+}
+[type='range']::-ms-thumb {
+    background: var(--primary-0);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: 0;
+}

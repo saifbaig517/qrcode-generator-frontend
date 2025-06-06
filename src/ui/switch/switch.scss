@@ -1,0 +1,35 @@
+:host {
+    position: relative;
+    border-radius: 2rem;
+    width: 3rem;
+    height: 1.3rem;
+    border: 1px solid var(--gray-2);
+    cursor: pointer;
+    background-color: white;
+}
+
+:host([disabled]) {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--gray-2);
+    position: absolute;
+    inset-inline-start: 0.1rem;
+    background-color: var(--gray-1);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+:host([checked]) {
+    .circle {
+        background-color: var(--success-0);
+        border-color: var(--success-0);
+        inset-inline-start: calc(100% - 0.1rem - 1.5rem);
+    }
+}

@@ -1,0 +1,110 @@
+:host {
+    display: block;
+    margin: 1rem 0;
+}
+
+.edit-header {
+    display: flex;
+    font-weight: bold;
+    color: var(--gray-2);
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    cursor: pointer;
+}
+
+.edit-box {
+    padding: 1rem;
+    border: 0.5rem var(--gray-0) solid;
+}
+
+[name]:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.edit-footer {
+    margin-top: 1rem;
+    display: flex;
+    padding: 0.15rem;
+}
+
+.cancel-button {
+    margin-right: 1rem;
+}
+
+.save-close-button {
+    margin-right: 1rem;
+}
+
+.delete-button {
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    .edit-footer {
+        flex-direction: column;
+    }
+
+    .edit-footer qrcg-button {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.preview-container {
+    display: flex;
+    padding: 0.5rem;
+    background-color: var(--gray-0);
+    align-items: center;
+
+    qrcg-icon.drag {
+        margin-inline-end: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+:host(.dragover) .preview-container {
+    background-color: rgb(252, 252, 197);
+}
+
+.block-name {
+    margin-inline-end: 1rem;
+    color: var(--dark);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: var(--gray-1);
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+}
+
+.model-name {
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.block-icon {
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.preview-action::part(button) {
+    min-width: initial;
+    padding: 0.5rem;
+}
+
+.stack-name {
+    border: 1px solid var(--gray-2);
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+    color: black;
+    padding: 0.25rem;
+}

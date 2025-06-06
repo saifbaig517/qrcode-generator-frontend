@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>QR Code Generator</title>
+
+        <script>
+            window.CONFIG = {
+                'app.url': 'http://localhost:81',
+                'app.name': 'Quick Code',
+                'frontend.slogan': 'QR Code Generator',
+                'app.env': 'local',
+                'paypal.client_id':
+                    'AYMnloVHNVji5nn1JOxALCsia3DArUcQ_bL4xo_RjrP8D7jjHrzXyL4K_hAqOxZrbF0T2g-PqPr7hWBh',
+            }
+        </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta
+            name="description"
+            content="It is a tool to generate QR Codes dynamically"
+        />
+
+        <base href="/" />
+
+        <link
+            id="normalize"
+            rel="stylesheet"
+            href="node_modules/modern-normalize/modern-normalize.css"
+        />
+
+        <script type="module" src="../src/index.js" id="dev"></script>
+
+        <style>
+            html {
+                font-size: calc(14px + 6 * ((100vw - 320px) / 1240));
+            }
+
+            @media (min-width: 2000px) {
+                html {
+                    font-size: calc(10px + 6 * (150vw / 1240));
+                }
+            }
+
+            body {
+                background-color: whitesmoke;
+            }
+
+            *:not(:defined) {
+                display: none;
+            }
+
+            :root {
+                --gray-0: whitesmoke;
+                --gray-1: #dedede;
+                --gray-2: #898989;
+                --primary-0: #1c57cb;
+                --primary-1: #48a9a6;
+                --accent-0: yellow;
+
+                --accent-1: #ffc800;
+
+                --danger: #ca2727;
+                --success-0: #416d41;
+                --warning-0: #ffdd9e;
+                --dark: #1b2740;
+
+                --header-bg: var(--primary-0);
+
+                --container-max-width: 55rem;
+            }
+
+            .captcha {
+                margin: auto;
+                max-width: 391px;
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+            }
+
+            qrcg-client-orange-bf {
+                max-width: 350px;
+                margin: auto;
+            }
+
+            qrcg-searchable-select {
+                width: 300px;
+                margin: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <qrcg-website-input></qrcg-website-input>
+    </body>
+</html>

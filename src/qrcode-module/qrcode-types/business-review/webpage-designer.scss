@@ -1,0 +1,10 @@
+.view-feedbacks-button {
+    color: var(--primary-0);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,14 @@
+.loading-container {
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+}
+
+:host[submit-loading] [name] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+[has-error] {
+    margin-bottom: 1rem;
+}

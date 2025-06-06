@@ -1,0 +1,75 @@
+:host {
+    display: block;
+    position: relative;
+}
+
+qrcg-button.add-item {
+    margin: auto;
+    margin-top: 2rem;
+    width: fit-content;
+}
+
+.item-image {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+
+    background-color: white;
+}
+
+.item {
+    display: flex;
+    padding: 0.5rem 1rem;
+    background-color: var(--gray-0);
+    margin: 1rem 0;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    flex-wrap: wrap;
+}
+
+.item .item-name {
+    flex: 1;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.actions qrcg-button:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.actions qrcg-button:not(:first-child) {
+    margin-left: 0.5rem;
+}
+
+.actions qrcg-button::part(button) {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    min-width: 0;
+}
+
+.empty-message {
+    margin: 2rem 0 0 0;
+    text-align: center;
+    color: var(--gray-2);
+}
+
+.error {
+    color: var(--danger);
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: bold;
+    bottom: 0rem;
+    transform: translateY(100%);
+    animation: fade-in ease 1s both;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

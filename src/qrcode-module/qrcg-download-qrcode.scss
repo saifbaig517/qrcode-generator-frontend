@@ -1,0 +1,80 @@
+:host {
+    display: block;
+}
+
+.buttons {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+qrcg-button {
+    width: 100%;
+}
+
+qrcg-button::part(button) {
+    font-size: 2rem;
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-note {
+    color: var(--gray-2);
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    line-height: 1.6;
+}
+
+qrcg-icon {
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--gray-2);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+qrcg-form {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.name-label {
+    color: var(--gray-2);
+    font-weight: bold;
+}
+
+@media (min-width: 900px) {
+    qrcg-button::part(button) {
+        padding: 2rem 0;
+        font-size: 3rem;
+    }
+
+    .buttons {
+        max-width: 60%;
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+.add-screenshot {
+    color: var(--primary-0);
+    margin-top: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

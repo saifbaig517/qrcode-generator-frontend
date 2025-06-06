@@ -1,0 +1,17 @@
+:host {
+    display: inline-flex;
+    padding: 0.5rem;
+    background-color: white;
+
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    qrcg-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+:host(:hover) {
+    border-color: black;
+}

@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.badge {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.25rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+
+.read-only {
+    background-color: var(--success-0);
+    color: white;
+}
+
+.super-admin {
+    background-color: var(--info-0);
+    color: white;
+}

@@ -1,0 +1,21 @@
+:host {
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+qrcg-button {
+    display: inline-block;
+}
+
+qrcg-button::part(button) {
+    background-color: var(--gray-0);
+    color: black;
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem;
+    min-width: unset;
+}
+
+:host([active]) qrcg-button::part(button) {
+    background-color: var(--gray-1);
+    color: black;
+}

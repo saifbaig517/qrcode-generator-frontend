@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}

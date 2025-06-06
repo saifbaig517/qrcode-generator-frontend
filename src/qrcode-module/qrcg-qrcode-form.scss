@@ -1,0 +1,83 @@
+:host {
+    display: block;
+}
+
+.step-navigator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.step-navigator.bottom {
+    position: fixed;
+    inset-inline-end: 3.5rem;
+    bottom: -10rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    gap: 1rem;
+    z-index: 1000000;
+
+    transition: 0.5s ease;
+
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+        bottom: 0;
+    }
+}
+
+*[hidden] {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid var(--gray-1);
+    border-radius: 0.5rem;
+    padding-inline-start: 1rem;
+    margin-bottom: 1rem;
+}
+
+header .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.steps-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    .start {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .step-navigator {
+        gap: 0.5rem;
+        margin: auto 0;
+    }
+}
+
+.header-toggle {
+    padding: 0.5rem;
+    border: 1px solid var(--gray-1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--gray-0);
+    }
+}

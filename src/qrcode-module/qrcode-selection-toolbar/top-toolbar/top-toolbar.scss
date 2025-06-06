@@ -1,0 +1,36 @@
+.toolbar-container {
+    display: flex;
+    position: absolute;
+    top: -3rem;
+    align-items: center;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    background-color: var(--gray-0);
+    padding-inline-start: 2rem;
+
+    animation: reveal-toolbar 0.3s ease both;
+
+    @keyframes reveal-toolbar {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .label {
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        color: var(--gray-2);
+    }
+
+    .stats {
+        margin-inline-start: 2rem;
+        font-size: 0.8rem;
+        color: var(--gray-2);
+        font-style: italic;
+    }
+}

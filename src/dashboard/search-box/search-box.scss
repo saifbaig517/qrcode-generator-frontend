@@ -1,0 +1,42 @@
+:host {
+    position: relative;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
+input {
+    background-color: white;
+    border: 0;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+    width: 25rem;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &::placeholder {
+        color: var(--gray-1);
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+qrcg-icon.search {
+    pointer-events: none;
+    position: absolute;
+    inset-inline-start: 1rem;
+    inset-block-start: 1rem;
+    color: var(--primary-0);
+}
+
+qrcg-icon.close {
+    position: absolute;
+    inset-inline-end: 1rem;
+    inset-block-start: 1rem;
+    color: var(--gray-2);
+    cursor: pointer;
+}

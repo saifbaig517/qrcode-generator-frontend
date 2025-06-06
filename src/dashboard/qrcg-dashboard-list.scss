@@ -1,0 +1,29 @@
+:host {
+    display: block;
+}
+
+qrcg-pagination {
+    margin-top: 1rem;
+}
+
+.search-form::part(form) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-form {
+    margin-bottom: 1rem;
+}
+
+.search-form label {
+    user-select: none;
+    -webkit-user-select: none;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+:host(.dir-rtl) .search-form label {
+    margin-left: 1rem;
+    margin-right: 0rem;
+}

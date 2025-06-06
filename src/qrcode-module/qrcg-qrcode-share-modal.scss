@@ -1,0 +1,44 @@
+:host {
+    display: block;
+}
+
+.share-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.share-container qrcg-input {
+    flex: 1;
+}
+
+.share-container qrcg-input::part(input) {
+    margin-bottom: 0;
+}
+
+.other-options-container {
+    .text {
+        margin-bottom: 0.5rem;
+        color: var(--gray-2);
+    }
+
+    .other-options {
+        display: flex;
+        gap: 1rem;
+
+        qrcg-icon {
+            cursor: pointer;
+            padding: 0.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--gray-0);
+            border-radius: 50%;
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid black;
+            }
+        }
+    }
+}

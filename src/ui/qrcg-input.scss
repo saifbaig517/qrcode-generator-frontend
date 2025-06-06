@@ -1,0 +1,98 @@
+:host([prefix]) input {
+    padding-left: 2.8rem;
+}
+
+.prefix {
+    position: absolute;
+    background-color: var(--gray-1);
+    color: var(--gray-2);
+    left: 0rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 0 0.8rem;
+}
+
+:host([focused]) .prefix {
+    background-color: var(--gray-2);
+    color: white;
+}
+
+:host(:hover) .password-toggle {
+    color: var(--dark);
+}
+
+.password-toggle {
+    position: absolute;
+    inset-inline-end: 0;
+    top: 50%;
+    color: var(--gray-2);
+    padding: 1rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    &.show {
+        .hide {
+            display: none;
+        }
+    }
+
+    &:not(.show) {
+        .show {
+            display: none;
+        }
+    }
+}
+
+:host([has-label]) {
+    .password-toggle {
+        top: calc(50% + 0.5rem);
+    }
+}
+
+:host(.elegant) {
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+
+    label {
+        position: absolute;
+        margin-bottom: 0;
+        transition: all 0.5s ease;
+        pointer-events: none;
+    }
+
+    input {
+        box-shadow: none;
+        border-bottom: 2px solid var(--gray-1);
+        border-radius: 0;
+        padding: 0.6rem 0;
+
+        &::placeholder {
+            font-weight: lighter;
+            font-size: 0;
+        }
+
+        &:focus {
+            border-bottom-color: black;
+        }
+    }
+}
+
+:host(.elegant.has-value),
+:host(.elegant[focused]) {
+    label {
+        transform: scale(1) translateY(-12px) translateX(0);
+    }
+}
+
+:host(.elegant:not(.has-value):not([focused])) {
+    label {
+        font-weight: lighter;
+        transform: scale(1.3) translateY(8px) translateX(10px);
+    }
+}

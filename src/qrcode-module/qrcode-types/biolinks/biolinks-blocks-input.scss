@@ -1,0 +1,85 @@
+:host {
+    display: block;
+}
+
+.empty-message {
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--gray-2);
+}
+
+.block-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.add-block-button {
+    --button-color: var(--dark);
+    --button-background-color: var(--light);
+
+    --button-color-hover: var(--dark);
+    --button-background-color-hover: var(--gray-1);
+
+    --button-box-shadow: none;
+
+    --button-hover-box-shadow: none;
+
+    &::part(button) {
+        border: 1px solid var(--gray-1);
+        font-size: 0.8rem;
+        padding: 0.35rem 0.5rem;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 900px) {
+    .add-block-button::part(button) {
+        padding: 1rem 0.5rem;
+        min-width: unset;
+    }
+}
+
+.add-block-button .block-icon {
+    margin-right: 0.5rem;
+    opacity: 0.8;
+}
+
+.block-types-container {
+    position: relative;
+}
+
+.block-types-title {
+    color: var(--gray-2);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.block-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.block-icon::part(loader) {
+    transform: scale(0.5);
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 1px solid var(--gray-1);
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+
+    .action {
+        color: var(--primary-0);
+        cursor: pointer;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

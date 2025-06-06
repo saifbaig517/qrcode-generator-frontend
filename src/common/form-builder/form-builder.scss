@@ -1,0 +1,90 @@
+:host([fetch-loading]) * {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.add {
+    color: var(--primary-0);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    qrcg-icon {
+        margin-right: 0.5rem;
+    }
+}
+
+[name] {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: var(--gray-2);
+}
+
+slot[name='instructions']::slotted(*) {
+    background-color: var(--gray-0);
+    color: var(--gray-2);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.delete {
+    qrcg-icon {
+        cursor: pointer;
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        padding: 1rem;
+        width: 4rem;
+        height: 4rem;
+        color: var(--danger-1);
+        cursor: pointer;
+    }
+}
+
+.toolbar {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .summary {
+        font-size: 0.8rem;
+        color: var(--gray-2);
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+    }
+
+    qrcg-button {
+        --button-color: var(--primary-0);
+        --button-background-color: transparent;
+        --button-background-color-hover: var(--gray-0);
+        --button-outline-focus: var(--gray-1);
+
+        qrcg-icon {
+            color: var(--gray-2);
+            margin-inline-end: 0.5rem;
+            pointer-events: none;
+        }
+
+        &::part(button) {
+            box-shadow: none;
+            min-width: initial;
+        }
+    }
+}

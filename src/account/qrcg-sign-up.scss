@@ -1,0 +1,44 @@
+.disabled-message {
+    font-weight: normal;
+    padding: 1rem;
+    background-color: var(--gray-0);
+    font-size: 0.8rem;
+    border-radius: 0;
+    margin-bottom: 1rem;
+}
+
+qrcg-app-logo {
+    margin-top: 2rem;
+}
+
+.go-home {
+    margin-top: 1rem;
+}
+
+.login-link {
+    display: block;
+    margin: 1.5rem auto 0.5rem;
+}
+
+.terms-link {
+    color: var(--primary-0);
+    text-decoration: none;
+    margin-left: 0.25rem;
+    display: inline-block;
+}
+
+:host(.dir-rtl) .terms-link {
+    margin-left: 0;
+    margin-right: 0.25rem;
+}
+
+.auth-manager-container:not(.has-buttons) {
+    display: none;
+}
+
+.auth-manager-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}

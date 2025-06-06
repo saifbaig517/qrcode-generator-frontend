@@ -1,0 +1,25 @@
+.feedback {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--gray-1);
+    padding: 0.5rem;
+    font-size: 0.95rem;
+    gap: 0.5rem;
+
+    .key {
+        color: var(--gray-2);
+    }
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.empty-message {
+    padding: 0.5rem;
+    color: var(--gray-2);
+    text-align: center;
+}

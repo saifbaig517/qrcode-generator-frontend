@@ -1,0 +1,124 @@
+:host {
+    display: block;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.logo-upgrade-message {
+    color: var(--danger);
+}
+
+@media (min-width: 70rem) {
+    .row {
+        flex-direction: row;
+    }
+}
+
+qrcg-qrcode-image {
+    width: 15rem;
+    margin: auto;
+    border: solid 0.5rem var(--gray-0);
+}
+
+.preview-image {
+    order: 1;
+    width: 100%;
+    margin: auto;
+    /* max-width: 20rem; */
+    height: fit-content;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 70rem) {
+    .preview-image {
+        margin: 0;
+        width: 25%;
+        order: 3;
+        max-width: unset;
+        box-sizing: border-box;
+    }
+
+    qrcg-qrcode-image {
+        width: unset;
+    }
+}
+
+.input-grid {
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    grid-gap: 1rem;
+    /* width: 75%; */
+    order: 2;
+}
+
+qrcg-range-input {
+    max-width: 30rem;
+}
+
+@media (min-width: 70rem) {
+    .input-grid {
+        grid-template-columns: 12rem 1fr;
+        width: 75%;
+        padding: 0;
+        padding-right: 1rem;
+    }
+}
+
+label {
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.warning {
+    background-color: var(--warning-0);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    line-height: 1.4;
+    color: black;
+}
+
+[name='shape']::part(image) {
+    padding: 0.25rem;
+}
+
+[name='text'] {
+    max-width: 20rem;
+}
+
+:host(.color-customization-disabled) qrcg-color-picker,
+:host(.color-customization-disabled) [name='fillType'],
+:host(.color-customization-disabled) [name='backgroundEnabled'] {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.ai-button {
+    margin-top: 1rem;
+}
+
+qrcg-designer-toggler {
+    background-color: var(--gray-0);
+    margin-inline-start: auto;
+}
+
+.designer-toggler-container {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+qrcg-checkbox {
+    width: max-content;
+}

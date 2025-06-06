@@ -1,0 +1,14 @@
+qrcg-qrcode-image {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+    &::part(instructions) {
+        display: none;
+    }
+}
+
+.view-full-size {
+    margin: 0.5rem auto 0;
+    width: max-content;
+}

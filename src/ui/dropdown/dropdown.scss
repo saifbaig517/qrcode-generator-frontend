@@ -1,0 +1,70 @@
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: var(--available-height, 100vh);
+    --border-radius: 1rem;
+
+    z-index: 1000;
+    animation: reveal-host 0.3s ease both;
+
+    @keyframes reveal-host {
+        from {
+            background-color: transparent;
+        }
+
+        to {
+            background-color: rgba(0, 0, 0, 0.372);
+        }
+    }
+}
+
+.container {
+    position: fixed;
+
+    top: var(--top);
+    left: var(--left);
+    width: var(--width);
+
+    background-color: white;
+
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.1);
+
+    border-radius: var(--border-radius);
+
+    animation: container-reveal 0.5s ease both;
+
+    @keyframes container-reveal {
+        from {
+            opacity: 0;
+            transform: translateY(1rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.content {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.item {
+    padding: 0.65rem;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+        border-bottom: 3px solid var(--gray-0);
+    }
+
+    &:hover {
+        background-color: var(--gray-0);
+    }
+}

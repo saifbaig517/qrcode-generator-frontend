@@ -1,0 +1,80 @@
+.main-container {
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    inset-inline-start: calc(var(--dashboard-sidebar-width, 15rem) + 1rem);
+    inset-inline-end: 1rem;
+    gap: 1.5rem;
+
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 10000;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: -1rem -1rem 2rem rgba(0, 0, 0, 0.1);
+
+    animation: reveal-main-container 0.5s ease both;
+
+    @media (max-width: 900px) {
+        inset-inline-start: 0.5rem;
+    }
+
+    @keyframes reveal-main-container {
+        from {
+            transform: translateY(5rem);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+}
+
+.text {
+    color: var(--gray-2);
+    font-style: italic;
+    font-size: 0.8rem;
+
+    &.no-italic {
+        font-style: normal;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.action {
+    color: var(--primary-0);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.25rem;
+    cursor: pointer;
+
+    :host([loading]) & {
+        color: var(--gray-2);
+        text-decoration: none;
+        pointer-events: none;
+    }
+}
+
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: black;
+    qrcg-loader {
+        transform: scale(0.3);
+    }
+}

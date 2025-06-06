@@ -1,0 +1,29 @@
+:host {
+}
+
+h2 {
+    color: var(--gray-2);
+    margin: 1rem 0 0 0;
+}
+
+.form-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+qrcg-balloon-selector {
+    margin-bottom: 1rem;
+}
+
+qrcg-button {
+    margin: 1rem auto 0 auto;
+    width: max-content;
+}
+
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}

@@ -1,0 +1,32 @@
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.group-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    background-color: var(--gray-0);
+}
+
+.group {
+    border: 1px solid var(--gray-1);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+    color: black;
+}
+
+.group-permissions {
+    padding: 1rem;
+}
+
+.label {
+    font-weight: bold;
+    margin: 1rem 0;
+}

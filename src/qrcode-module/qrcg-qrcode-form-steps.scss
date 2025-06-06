@@ -1,0 +1,72 @@
+:host {
+    display: block;
+    user-select: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+
+    --inactive-bg: var(--gray-0);
+
+    --active-bg: var(--primary-0);
+
+    --passed-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    &[disabled] {
+        pointer-events: none;
+    }
+
+    .number {
+        padding: 0.25rem 0.5rem;
+        background-color: var(--gray-0);
+        border-radius: 0.4rem;
+        border: 2px solid var(--gray-0);
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        margin-inline-end: 1rem;
+    }
+
+    &.current {
+        .number {
+            border-color: var(--gray-2);
+        }
+
+        .text {
+            font-weight: bold;
+        }
+    }
+
+    &.not-current {
+        color: var(--gray-2);
+    }
+
+    &.passed {
+        .number {
+            background-color: var(
+                --active-step-background-color,
+                var(--success-0)
+            );
+            color: var(--active-step-text-color, white);
+            border-color: var(--active-step-background-color, var(--success-0));
+        }
+    }
+}

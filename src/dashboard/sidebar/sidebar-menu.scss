@@ -1,0 +1,107 @@
+$hover-bg: var(--dashboard-sidebar-hover-background-color, var(--gray-0));
+$hover-color: var(--dashboard-sidebar-hover-text-color, var(--primary-0));
+$label-color: var(--dashboard-sidebar-label-color, #18d8ea);
+
+:host {
+    display: block;
+}
+
+qrcg-animated-badge {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.item {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--dashboard-sidebar-text-color, white);
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.1s ease;
+    -webkit-touch-callout: none;
+    position: relative;
+}
+
+.item.active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (hover) {
+    .item:hover {
+        background-color: #{$hover-bg};
+        color: #{$hover-color};
+    }
+}
+
+.group {
+    label {
+        font-weight: bold;
+        display: block;
+        color: var(--dashboard-sidebar-text-color, white);
+        font-size: 0.65rem;
+        margin: 0 0 0.5rem 1rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    &.locked {
+        qrcg-icon {
+            display: none;
+        }
+        margin-bottom: 1rem;
+
+        label {
+            color: $label-color;
+        }
+    }
+
+    &:not(.locked).expanded {
+        margin: 1rem 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1rem 0;
+        border-radius: 0.2rem;
+
+        label {
+            color: white;
+            cursor: pointer;
+            margin-inline-end: 1rem;
+        }
+
+        .item {
+            margin: 0 1rem;
+        }
+
+        qrcg-icon {
+            opacity: 0.5;
+            transform: rotate(90deg);
+        }
+    }
+
+    &:not(.locked):not(.expanded) {
+        label {
+            //
+            @extend .item;
+
+            display: flex;
+
+            font-weight: normal;
+            font-size: 0.8rem;
+            text-transform: none;
+
+            margin: 0;
+
+            qrcg-icon {
+                opacity: 0.5;
+            }
+        }
+    }
+}

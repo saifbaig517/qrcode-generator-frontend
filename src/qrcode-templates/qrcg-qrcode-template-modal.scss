@@ -1,0 +1,21 @@
+[name] {
+    margin-bottom: 1rem;
+}
+
+.template-actions {
+    padding: 1rem;
+    background-color: var(--gray-0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modify-button {
+    margin-right: 0.5rem;
+    --button-background-color: var(--gray-1);
+
+    --button-color: black;
+    --button-color-hover: white;
+}

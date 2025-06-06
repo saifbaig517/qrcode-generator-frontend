@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>QR Code Generator</title>
+
+        <script>
+            window.CONFIG = {
+                'app.url': 'https://qralif.com',
+                'app.env': 'local',
+                'app.name': 'Quick Code',
+                'frontend.slogan': 'QR Code Generator',
+                'app.frontend_custom_url': '',
+                'qrcode.storage_path': 'qrcode_files',
+                'frontend.header_logo_url': '',
+                'frontend.header_logo_inverse_url': '',
+                'content-manager.positions': '["About page"]',
+                'app.email_verification_after_sign_up': 'disabled',
+                'qrcode.skip_install_step_1': '',
+                'preprintedqrcodes.master_qrcode_enabled': 'enabled',
+                'app.authentication_type': '',
+                'app.firebase_config_object': ``,
+                currency:
+                    '{"id":8,"name":"United Arab Emirates Dirhams","currency_code":"AED","symbol":"$","is_enabled":1,"created_at":"2022-09-07T06:26:44.000000Z","updated_at":"2022-09-07T06:26:51.000000Z"}',
+                'app.after_logout_action': '"redirect_to_home_page"',
+                'app.wplus_integration_enabled': '',
+                'app.frontend_links': '',
+                'app.dashboard-client-menu': '',
+                'app.new_user_registration': '',
+                'theme.default_scrollbar': '',
+                'preview.canvasTextRender': '',
+                'app.paid_subscriptions': '',
+                'app.available_qrcode_types': '',
+                'app.frontend_pricing_plans_url': '',
+                'droplet.is_large': 'true',
+                'app.mobile_number_field': '"optional"',
+                'billing.mode': '""',
+                'account_credit.dynamic_qrcode_price': '"10"',
+                'account_credit.static_qrcode_price': '"1"',
+            }
+
+            history.scrollRestoration = 'manual'
+
+            var QRCG_BUNDLE_TYPE = 'development'
+        </script>
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+        />
+
+        <base href="/" />
+
+        <meta name="theme-color" content="#ffffff" />
+
+        <meta name="theme-color" content="#ffffff" />
+
+        <link
+            id="normalize"
+            rel="stylesheet"
+            href="node_modules/modern-normalize/modern-normalize.css"
+        />
+
+        <script type="module" src="src/index.js" id="dev"></script>
+
+        <style>
+            html {
+                font-size: 16px;
+                --dashboard-sidebar-width: 14rem;
+                --qrcg-font-family: system-ui, -apple-system, Segoe UI, Roboto,
+                    Helvetica, Arial, sans-serif, Apple Color Emoji,
+                    Segoe UI Emoji;
+
+                --qrcg-rtl-font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+                    sans-serif;
+            }
+
+            body {
+                font-family: var(--qrcg-font-family);
+
+                opacity: 0;
+            }
+
+            body.resolved {
+                animation: body-fade-in 0.5s 0.1s ease-in both;
+            }
+
+            @keyframes body-fade-in {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 100%;
+                }
+            }
+
+            *:not(:defined) {
+                display: none;
+            }
+
+            :root {
+                --gray-0: whitesmoke;
+                --gray-1: #dedede;
+                --gray-2: #9d9dac;
+
+                --primary-0: #363a9a;
+                --primary-1: #17b8b3;
+
+                --info-0: rgb(51, 102, 185);
+
+                --dashboard-sidebar-background-color: var(--primary-0);
+                --accent-0: yellow;
+
+                --accent-1: #ffc800;
+
+                --danger: #e93e3e;
+                --danger-1: #c61212;
+                --success-0: #56ae56;
+                --warning-0: #ffdd9e;
+                --warning-1: #ebab34;
+                --dark: #1b2740;
+                --light: white;
+
+                --header-bg: var(--primary-0);
+
+                --container-max-width: 55rem;
+
+                --breakpoint: 70rem;
+
+                --available-dashboard-sidebar-height: 100vh;
+
+                --dashboard-page-content-padding-bottom: 1rem;
+
+                --checkout-page-gradient-color-1: var(--primary-0);
+                --checkout-page-gradient-color-2: var(--primary-1);
+            }
+        </style>
+
+        <script>
+            window.QRCG_AI_IS_ENABLED = true
+
+            window.QRCG_QR_TYPES_SORT_ORDER = [
+                { slug: 'vcard', sort_order: '-200' },
+                { slug: 'url', sort_order: '-100' },
+                { slug: 'business-profile', sort_order: '-90' },
+                { slug: 'call', sort_order: '-90' },
+                { slug: 'vcard-plus', sort_order: '-80' },
+                { slug: 'restaurant-menu', sort_order: '-70' },
+                { slug: 'product-catalogue', sort_order: '-60' },
+                { slug: 'text', sort_order: '-50' },
+                { slug: 'brazilpix', sort_order: null },
+                { slug: 'crypto', sort_order: null },
+                { slug: 'email', sort_order: null },
+                { slug: 'event', sort_order: null },
+                { slug: 'facetime', sort_order: null },
+                { slug: 'google-review', sort_order: null },
+                { slug: 'location', sort_order: null },
+                { slug: 'facebookmessenger', sort_order: null },
+                { slug: 'paypal', sort_order: null },
+                { slug: 'skype', sort_order: null },
+                { slug: 'sms', sort_order: null },
+                { slug: 'telegram', sort_order: null },
+                { slug: 'viber', sort_order: null },
+                { slug: 'wechat', sort_order: null },
+                { slug: 'whatsapp', sort_order: null },
+                { slug: 'wifi', sort_order: null },
+                { slug: 'zoom', sort_order: null },
+            ]
+        </script>
+    </head>
+
+    <body>
+        <qrcg-account-router></qrcg-account-router>
+        <qrcg-qrcode-router></qrcg-qrcode-router>
+        <qrcg-user-router></qrcg-user-router>
+        <qrcg-subscription-plan-router></qrcg-subscription-plan-router>
+
+        <qrcg-route route="/">
+            <template>
+                <h1
+                    style="
+                        text-align: center;
+                        padding: 3rem;
+                        line-height: 1.7;
+                        color: var(--gray-2);
+                    "
+                >
+                    This project is used in the dashboard area only.
+                    <br />
+                    For more details please check the
+                    <a
+                        href="https://docs.quickcode.digital/developer/"
+                        target="_blank"
+                        style="color: var(--primary-0)"
+                        >docs</a
+                    >.
+                </h1>
+                <div style="margin: 2rem auto; max-width: 200px">
+                    <qrcg-button href="/account/login"> Login Now </qrcg-button>
+                </div>
+            </template>
+        </qrcg-route>
+    </body>
+</html>

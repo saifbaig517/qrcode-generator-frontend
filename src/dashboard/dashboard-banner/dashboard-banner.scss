@@ -1,0 +1,47 @@
+.background-image {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: var(--banner-height, 10rem);
+    justify-content: flex-end;
+}
+
+.background-video-container {
+    position: relative;
+    padding: 5rem 0 1rem;
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+.container {
+    margin: 0 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    color: var(--text-color, white);
+    text-align: center;
+    line-height: 1.7;
+}
+
+.title,
+.subtitle {
+    z-index: 3;
+    position: relative;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+}

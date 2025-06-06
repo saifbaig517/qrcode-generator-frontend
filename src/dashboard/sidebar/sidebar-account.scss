@@ -1,0 +1,129 @@
+:host {
+    display: block;
+    background-color: var(
+        --dashboard-sidebar-background-color,
+        var(--primary-0)
+    );
+    color: white;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+}
+
+.account-container {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    background-color: var(
+        --dashboard-sidebar-background-color,
+        var(--primary-0)
+    );
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+}
+
+.email {
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+}
+
+.account-container.trial qrcg-button::part(button) {
+    background-color: var(--accent-0);
+    color: black;
+}
+
+.account-container.normal-account qrcg-button::part(button) {
+    background-color: white;
+    color: black;
+}
+
+.stats {
+    display: flex;
+    text-align: left;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: var(
+        --dashboard-sidebar-background-color,
+        var(--primary-0)
+    );
+
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6rem;
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.stats-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.5rem;
+    line-height: 0.5rem;
+    height: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stats-item span {
+    line-height: 0.6rem;
+    height: 0.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 4rem;
+    text-overflow: ellipsis;
+}
+
+.plan-name {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.minimal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .plan-name {
+        display: none;
+    }
+
+    .email {
+        margin-top: 1rem;
+        width: 10rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .account-container {
+        margin-top: 0.5rem;
+    }
+}

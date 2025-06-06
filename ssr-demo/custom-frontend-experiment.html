@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <script>
+            const CONFIG = {
+                'config.app.url': 'http://myip:81',
+                'config.app.name': 'Quick Code',
+                'config.frontend.slogan': 'QR Code Generator',
+                'config.qrcode.storage_path': 'qrcode_files',
+                'config.paypal.client_id':
+                    'AYMnloVHNVji5nn1JOxALCsia3DArUcQ_bL4xo_RjrP8D7jjHrzXyL4K_hAqOxZrbF0T2g-PqPr7hWBh',
+            }
+        </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+            body {
+                background-color: whitesmoke;
+            }
+
+            *:not(:defined) {
+                display: none;
+            }
+
+            :root {
+                --gray-0: whitesmoke;
+                --gray-1: #dedede;
+                --gray-2: #898989;
+                --primary-0: #1c57cb;
+                --primary-1: #48a9a6;
+                --accent-0: yellow;
+
+                --accent-1: #ffc800;
+
+                --danger: #ca2727;
+                --success-0: #416d41;
+                --warning-0: #ffdd9e;
+                --dark: #1b2740;
+
+                --header-bg: var(--primary-0);
+
+                --container-max-width: 55rem;
+            }
+
+            .container {
+                max-width: var(--container-max-width);
+            }
+        </style>
+
+        <script async src="http://myip:81/bundle-11a3d74a.js"></script>
+    </head>
+    <body>
+        <qrcg-website-banner></qrcg-website-banner>
+    </body>
+</html>

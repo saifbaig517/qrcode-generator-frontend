@@ -1,0 +1,35 @@
+:host {
+    --desktop-max-width: 70%;
+}
+
+.body {
+    text-align: center;
+    border-bottom: 0;
+    max-height: 80vh;
+}
+
+.toolbar {
+    border-bottom: 0;
+}
+
+.close {
+    position: absolute;
+    border-radius: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: -1.25rem;
+    inset-inline-end: 1rem;
+    color: white;
+    background-color: var(--primary-0);
+    padding: 0.5rem;
+}
+
+video {
+    border-radius: 1rem;
+    width: 60%;
+    margin: auto;
+}
+
+.raw-content {
+    font-size: 1.2rem;
+}

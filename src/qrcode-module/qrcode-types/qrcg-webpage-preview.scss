@@ -1,0 +1,41 @@
+:host {
+    display: block;
+    box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+    :host {
+        min-width: 400px;
+    }
+}
+
+.frame {
+    background-color: var(--gray-0);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+iframe {
+    box-shadow: none !important;
+    border: 0;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

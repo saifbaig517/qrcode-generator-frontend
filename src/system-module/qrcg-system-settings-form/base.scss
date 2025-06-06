@@ -1,0 +1,98 @@
+:host {
+    display: block;
+}
+
+[name] {
+    margin-top: 1rem;
+}
+
+section {
+    border: 0.5rem solid var(--gray-0);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    margin-top: 0;
+    /* font-weight: normal; */
+    color: var(--gray-2);
+}
+
+qrcg-form-comment p {
+    margin: 0;
+}
+
+@media (min-width: 900px) {
+    qrcg-input,
+    qrcg-textarea,
+    qrcg-balloon-selector {
+        max-width: 50%;
+    }
+
+    qrcg-form-comment {
+        max-width: calc(50% - 2rem);
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    color: var(--primary-0);
+    text-decoration: none;
+}
+
+.copy-code {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+.copy-code qrcg-copy-icon {
+    margin-left: 0.5rem;
+}
+
+.instructions {
+    padding: 1rem;
+    background-color: var(--gray-0);
+    line-height: 1.5;
+}
+
+.copy-text-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.instructions qrcg-copy-icon {
+    margin-left: 1rem;
+}
+
+.copy-text {
+    background-color: white;
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+.copy-text div {
+    user-select: all;
+    max-width: 50vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 900px) {
+    .instructions {
+        max-width: calc(50% - 2rem);
+    }
+}
+
+.hidden {
+    display: none;
+}

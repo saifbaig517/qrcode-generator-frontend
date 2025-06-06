@@ -1,0 +1,24 @@
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.signup {
+    text-align: right;
+}
+
+.auth-manager-container:not(.has-buttons) {
+    display: none;
+}
+
+.auth-manager-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+[name] {
+    margin-bottom: 1rem;
+}

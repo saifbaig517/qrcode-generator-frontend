@@ -1,0 +1,126 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+}
+
+.screenshot {
+    position: relative;
+    width: 100%;
+    padding-bottom: 120%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+
+    iframe {
+        --iframe-width: 400;
+        --iframe-width-px: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 900px;
+        width: var(--iframe-width-px);
+        overflow: hidden;
+        border: 0;
+        pointer-events: none;
+        transform-origin: top left;
+        transform: scale(
+            calc(var(--screenshot-width, 200) / var(--iframe-width))
+        );
+    }
+}
+
+:host([disabled]),
+:host([loading]) {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.name {
+    margin: 1rem 0 0.5rem;
+    white-space: nowrap;
+    height: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    max-width: 10rem;
+}
+
+.name-text {
+    text-overflow: ellipsis;
+}
+
+.description {
+    height: 1.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    inset-inline-end: 1rem;
+}
+
+qrcg-button::part(button) {
+    min-width: 0;
+}
+
+.use-template {
+    --button-background-color: var(--gray-1);
+    --button-color: black;
+    --button-color-hover: white;
+    --qrcg-loader-h-color: black;
+}
+
+.use-template::part(button) {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+}
+
+.use-template.disabled {
+    --button-color: var(--gray-2);
+}
+
+qrcg-icon.settings {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: black;
+    }
+}
+
+.meta {
+    display: flex;
+    font-size: 0.7rem;
+    font-weight: bold;
+    align-items: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+}
+
+.cat {
+    margin-left: 0.25rem;
+    color: var(--gray-2);
+}
+
+.type {
+    background-color: var(--gray-1);
+    color: var(--gray-2);
+    padding: 0.25rem 0.5rem;
+    max-width: 90%;
+    overflow: hidden;
+    border-radius: 0.25rem;
+}

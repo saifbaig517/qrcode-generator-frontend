@@ -1,0 +1,115 @@
+:host([opened]) {
+    align-items: flex-end;
+    padding: 0;
+    color: var(--dark);
+}
+
+.overlay {
+    opacity: 0.3;
+}
+
+.container {
+    width: var(--target-width);
+    box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
+        rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
+    border-radius: 1.5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    max-height: unset;
+}
+
+.close {
+    color: var(--dark);
+    margin-inline-start: auto;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: min-content;
+    height: unset;
+
+    &:hover {
+        background-color: var(--gray-0);
+    }
+}
+
+header {
+    padding: 1rem 2rem;
+}
+
+.body {
+    max-height: 80vh;
+    padding: 0 2rem;
+    border-bottom: 0;
+}
+
+.title-container {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+
+    .header-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .header-image-container {
+        position: relative;
+
+        .icon {
+            color: #f45a57;
+            background-color: white;
+            border-radius: 50%;
+            padding: 0.5rem;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            bottom: 0;
+            inset-inline-end: 0;
+            filter: drop-shadow(0px 2.76923px 8.30769px rgba(22, 29, 37, 0.1));
+        }
+    }
+
+    .text {
+        font-size: 1.3rem;
+    }
+}
+
+.actions {
+    flex-direction: column;
+    justify-content: stretch;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+[modal-affirmative] {
+    margin: 0;
+    width: 100%;
+
+    --button-color: white;
+    --button-color-hover: var(--button-color);
+    --button-color-active: var(--button-color);
+    --button-color-focused: var(--button-color-hover);
+
+    --button-background-color: black;
+    --button-background-color-hover: var(--gray-2);
+    --button-outline-focus: var(--primary-1);
+
+    --button-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+    --button-hover-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+    svg {
+        width: 1.3rem;
+        margin-inline-end: 1rem;
+    }
+}
+
+.actions qrcg-button:last-child {
+    margin: 0;
+}
+
+.no-sell {
+    margin: 1rem;
+    font-weight: lighter;
+}

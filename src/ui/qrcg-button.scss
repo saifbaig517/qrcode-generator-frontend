@@ -1,0 +1,178 @@
+:host {
+    display: flex;
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    --button-color: white;
+    --button-color-hover: var(--button-color);
+    --button-color-active: var(--button-color);
+    --button-color-focused: var(--button-color-hover);
+
+    --button-background-color: var(--primary-0);
+    --button-background-color-hover: var(--primary-1);
+    --button-outline-focus: var(--primary-1);
+
+    --button-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+    --button-hover-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+::slotted(qrcg-icon) {
+    pointer-events: none;
+}
+
+:host([round]) {
+    padding-inline-end: 1rem;
+
+    button {
+        min-width: 0;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+:host([danger]) {
+    --button-background-color: var(--danger);
+    --button-background-color-hover: var(--danger-1);
+}
+
+:host([hidden]) {
+    display: none;
+}
+
+:host([disabled]),
+:host([loading]) {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+button {
+    padding: 0.85rem 0.8rem;
+    width: 100%;
+    font-weight: bold;
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    min-width: 110px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /** prevent zoom on multiple tap */
+    touch-action: manipulation;
+    border-radius: 0.5rem;
+    outline: 0;
+    position: relative;
+    box-shadow: var(--button-box-shadow);
+    transition: all 0.3s ease;
+}
+
+:host(.dir-rtl) button {
+    letter-spacing: 0;
+    font-family: var(--qrcg-rtl-font-family);
+}
+
+button:focus {
+    color: var(--button-color);
+    outline: 1px solid var(--button-outline-focus);
+    box-shadow: var(--button-hover-box-shadow);
+}
+
+button:active {
+    color: var(--button-color-active);
+    box-shadow: var(--button-hover-box-shadow);
+}
+
+button:hover {
+    color: var(--button-color-hover);
+    background-color: var(--button-background-color-hover);
+    box-shadow: var(--button-hover-box-shadow);
+}
+
+:host([transparent]) button {
+    background-color: transparent;
+    color: black;
+}
+
+:host([transparent]) button:hover {
+    background-color: var(--gray-1);
+    color: black;
+}
+
+:host([no-shadow]) button {
+    box-shadow: none !important;
+}
+
+:host([transparent]) button {
+    box-shadow: none !important;
+}
+
+qrcg-loader-h {
+    position: absolute;
+    pointer-events: none;
+    transform: translateY(-50%) scale(0.8);
+    top: calc(50% + 2px);
+    display: none;
+}
+
+:host([transparent]) {
+    --qrcg-loader-h-color: black;
+}
+
+:host([loading]) qrcg-loader-h {
+    display: block;
+}
+
+:host([loading]) .content {
+    opacity: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+::slotted(*) svg {
+    pointer-events: none;
+}
+
+:host(.elegant) {
+    --button-color: var(--primary-0);
+    --button-background-color: transparent;
+    --button-background-color-hover: var(--gray-0);
+    --button-outline-focus: var(--gray-1);
+
+    ::slotted(qrcg-icon) {
+        color: var(--gray-2);
+        margin-inline-end: 0.5rem;
+        pointer-events: none;
+    }
+
+    button {
+        box-shadow: none;
+        min-width: initial;
+    }
+}
+
+:host(.elegant[loading]) {
+    --qrcg-loader-h-color: var(--gray-2);
+}
